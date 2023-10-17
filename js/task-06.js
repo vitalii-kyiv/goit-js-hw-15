@@ -3,13 +3,13 @@ console.log(input);
 
 function handleBlur(evt) {
   if (
-    evt.currentTarget.value.length ===
+    evt.currentTarget.value.length !==
     parseInt(input.getAttribute("data-length"))
   ) {
-    input.classList.add("valid");
-    input.classList.replace("invalid", "valid");
-  } else {
+    input.classList.add("invalid");
     input.classList.replace("valid", "invalid");
+  } else {
+    input.classList.replace("invalid", "valid");
   }
 }
 
